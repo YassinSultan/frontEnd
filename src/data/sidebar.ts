@@ -3,12 +3,11 @@ export const data = {
   navMain: [
     {
       title: "الصفحة الرئيسة",
-      url: "/home",
-      items: [],
+      url: "/",
     },
     {
       title: "الشركات",
-      url: "#",
+      url: "/company",
     },
   ],
 };

@@ -17,7 +17,9 @@ export default function Layout() {
             <SidebarInset>
               <main>
                 <SiteHeader />
-                <Outlet />
+                <div className="container mx-auto p-5">
+                  <Outlet />
+                </div>
               </main>
             </SidebarInset>
           </SidebarProvider>

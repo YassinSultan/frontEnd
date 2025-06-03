@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Login from "@/pages/Login";
 import Home from "@/pages/Home";
-import { Navigate } from "react-router-dom";
+import Company from "@/pages/Company";
 
 const routes = [
   {
@@ -10,18 +10,22 @@ const routes = [
     element: <Layout />,
     children: [
       {
-        index: true,
-        element: <Navigate to="/home" replace />,
-      },
-      {
-        path: "login",
+        path: "/login",
         element: <Login />,
       },
       {
-        path: "home",
+        index: true,
         element: (
           <ProtectedRoute>
             <Home />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "company",
+        element: (
+          <ProtectedRoute>
+            <Company />
           </ProtectedRoute>
         ),
       },
